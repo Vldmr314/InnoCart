@@ -1,4 +1,6 @@
-class ApiOrder {
+import 'package:equatable/equatable.dart';
+
+class ApiOrder extends Equatable {
   final int id;
   final String productName;
   final double weight;
@@ -29,10 +31,14 @@ class ApiOrder {
     return {
       'productName': productName,
       'weight': weight,
-      'size': description,
+      'description': description,
       'price': price,
       'reward': reward,
       'contacts': contacts
     };
   }
+
+  @override
+  List<Object> get props =>
+      [id, productName, weight, description, price, reward, contacts];
 }

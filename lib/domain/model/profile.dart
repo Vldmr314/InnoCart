@@ -1,4 +1,6 @@
-class Profile {
+import 'package:equatable/equatable.dart';
+
+class Profile extends Equatable{
   final int id;
   final String nickname;
   final double rating;
@@ -10,4 +12,7 @@ class Profile {
     required this.rating,
     required this.dealsCompleted,
   });
+
+  @override
+  List<Object> get props => [id, nickname, rating, dealsCompleted];
 }

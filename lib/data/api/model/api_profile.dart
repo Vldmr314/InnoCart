@@ -1,4 +1,6 @@
-class ApiProfile {
+import 'package:equatable/equatable.dart';
+
+class ApiProfile extends Equatable{
   final int id;
   final String nickname;
   final double rating;
@@ -24,4 +26,7 @@ class ApiProfile {
       'dealsCompleted': dealsCompleted,
     };
   }
+
+  @override
+  List<Object> get props => [id, nickname, rating, dealsCompleted];
 }

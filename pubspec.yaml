@@ -40,6 +40,7 @@ dependencies:
   bottom_navy_bar: ^6.0.0
 #  animated_theme_switcher: ^2.0.5
   flutter_screenutil: ^5.5.3
+  equatable: ^2.0.3
 #  theme_provider: ^0.5.0
 
 dev_dependencies:

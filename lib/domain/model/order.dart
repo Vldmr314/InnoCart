@@ -1,4 +1,6 @@
-class Order {
+import 'package:equatable/equatable.dart';
+
+class Order extends Equatable{
   final int id;
   final String productName;
   final double weight;
@@ -15,4 +17,8 @@ class Order {
       required this.price,
       required this.reward,
       required this.contacts});
+
+  @override
+  List<Object> get props =>
+      [id, productName, weight, description, price, reward, contacts];
 }
